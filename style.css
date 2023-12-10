@@ -16,7 +16,8 @@ body {
 
 .heading-text {
   text-align: center;
-  z-index: 1000;
+  color: white;
+  /* padding-bottom: 30rem; */
 }
 
 .containers {
