@@ -1,19 +1,19 @@
-console.log("script running");
+console.log("script 3 running");
 
-let container = document.querySelector(".containers");
-let btn = document.getElementById("spin");
-let number = Math.ceil(Math.random() * 10000);
-let mid = document.querySelector(".mid");
-let reset = document.getElementById("reset");
+let container3 = document.querySelector(".containers3");
+let btn3 = document.getElementById("spin3");
+let number3 = Math.ceil(Math.random() * 10000);
+let mid3 = document.querySelector(".mid3");
+let reset3 = document.getElementById("reset3");
 
-let flash = document.querySelector(".containers .one");
+let flash3 = document.querySelector(".containers3 .one3");
 
-btn.onclick = function () {
-  container.style.transform = "rotate(" + number + "deg)";
-  number += Math.ceil(Math.random() * 10000);
-  container.classList.add("spin");
+btn3.onclick = function () {
+  container3.style.transform = "rotate(" + number + "deg)";
+  number3 += Math.ceil(Math.random() * 10000);
+  container3.classList.add("spin3");
   setTimeout(() => {
-    container.classList.add("hide-spinner");
+    container3.classList.add("hide-spinner3");
     // mid.classList.add("hide-mid");
   }, 3000);
 };
@@ -21,13 +21,15 @@ btn.onclick = function () {
 async function getRandomUser() {
   try {
     const response = await fetch("http://192.168.16.81:8002/raffeldraw/list/");
+    // const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
     const users = await response.json();
 
     const randomUser = users[Math.floor(Math.random() * users.length)];
 
     return {
       id: randomUser.id,
-      name: randomUser.name,
+      name: randomUser?.name,
       companyName: randomUser.companyName,
       designation: randomUser.designation,
     };
@@ -37,22 +39,25 @@ async function getRandomUser() {
   }
 }
 
-document.getElementById("spin").addEventListener("click", async () => {
-  const userDetailsContainer = document.getElementById("userDetails");
+document.getElementById("spin3").addEventListener("click", async () => {
+  const userDetailsContainer = document.getElementById("userDetails3");
 
   const randomUser = await getRandomUser();
-  // btn.classList.add("hide-btn");
-  // btn.classList.remove("show-btn");
-  // reset.classList.add("show-btn");
-  // reset.classList.remove("hide-btn");
+  //   btn3.classList.add("hide-btn3");
+  //   btn3.classList.remove("show-btn3");
+  //   reset3.classList.add("show-btn3");
+  //   reset3.classList.remove("hide-btn3");
   setTimeout(async () => {
-    container.classList.add("hide-spinner");
+    container3.classList.add("hide-spinner3");
     if (randomUser) {
       userDetailsContainer.innerHTML = `
-        <h4>2nd Winner</h4>
+        <h4>3rd Winner</h4>
         <p class='name-tag'>${randomUser?.name}</p>
         <p class='detail'>${randomUser?.companyName}</p>
         <p class='detail'>(${randomUser?.designation})</p>
+        // <p class='name-tag'>${randomUser?.name}</p>
+        // <p class='detail'>${randomUser?.website}</p>
+        // <p class='detail'>(${randomUser?.company?.name})</p>
       `;
     }
   }, 4000);
@@ -82,6 +87,6 @@ document.getElementById("spin").addEventListener("click", async () => {
 });
 
 // document.addEventListener("DOMContentLoaded", () => {
-//   btn.classList.add("show-btn");
-//   reset.classList.add("hide-btn");
+//   btn3.classList.add("show-btn3");
+//   reset3.classList.add("hide-btn3");
 // });
