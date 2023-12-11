@@ -139,7 +139,7 @@
 .ribbon2 {
   background: #0367a6;
   color: #fff;
-  padding: 18px;
+  /* padding: 18px; */
   text-align: center;
   margin-left: -20px;
   margin-right: -20px;
@@ -314,17 +314,17 @@
 
 #userDetails2 {
   background-color: #023373;
-  padding: 5rem;
+  padding: 1rem;
 }
 
 .name-tag2 {
-  font-size: xx-large;
+  font-size: large;
   font-weight: bold;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .detail2 {
-  font-size: x-large;
+  font-size: medium;
 }
 
 /* 

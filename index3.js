@@ -43,21 +43,18 @@ document.getElementById("spin3").addEventListener("click", async () => {
   const userDetailsContainer = document.getElementById("userDetails3");
 
   const randomUser = await getRandomUser();
-  //   btn3.classList.add("hide-btn3");
-  //   btn3.classList.remove("show-btn3");
-  //   reset3.classList.add("show-btn3");
-  //   reset3.classList.remove("hide-btn3");
+  btn3.classList.add("hide-btn3");
+  btn3.classList.remove("show-btn3");
+  // reset3.classList.add("show-btn3");
+  // reset3.classList.remove("hide-btn3");
   setTimeout(async () => {
     container3.classList.add("hide-spinner3");
     if (randomUser) {
       userDetailsContainer.innerHTML = `
-        <h4>3rd Winner</h4>
-        <p class='name-tag'>${randomUser?.name}</p>
-        <p class='detail'>${randomUser?.companyName}</p>
-        <p class='detail'>(${randomUser?.designation})</p>
-        // <p class='name-tag'>${randomUser?.name}</p>
-        // <p class='detail'>${randomUser?.website}</p>
-        // <p class='detail'>(${randomUser?.company?.name})</p>
+        <h4>3rd Prize</h4>
+        <p class='name-tag3'>${randomUser?.name}</p>
+        <p class='detail3'>${randomUser?.companyName}</p>
+        <p class='detail3'>(${randomUser?.designation})</p>
       `;
     }
   }, 4000);
@@ -71,10 +68,11 @@ document.getElementById("spin3").addEventListener("click", async () => {
           headers: {
             "Content-Type": "application/json",
           },
+          body: JSON.stringify({ prizeNumber: 3 }),
         }
       );
       const user = await response.json();
-      console.log("user", user);
+      console.log("user 3", user);
 
       return {
         user,

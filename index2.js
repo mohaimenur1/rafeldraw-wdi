@@ -41,18 +41,18 @@ document.getElementById("spin2").addEventListener("click", async () => {
   const userDetailsContainer = document.getElementById("userDetails2");
 
   const randomUser = await getRandomUser();
-  //   btn2.classList.add("hide-btn2");
-  //   btn2.classList.remove("show-btn2");
-  //   reset2.classList.add("show-btn2");
-  //   reset2.classList.remove("hide-btn2");
+  btn2.classList.add("hide-btn2");
+  btn2.classList.remove("show-btn2");
+  // reset2.classList.add("show-btn2");
+  // reset2.classList.remove("hide-btn2");
   setTimeout(async () => {
     container2.classList.add("hide-spinner2");
     if (randomUser) {
       userDetailsContainer.innerHTML = `
-        <h4>1st Winner</h4>
-        <p class='name-tag'>${randomUser?.name}</p>
-        <p class='detail'>${randomUser?.companyName}</p>
-        <p class='detail'>(${randomUser?.designation})</p>
+        <h4>2nd Prize</h4>
+        <p class='name-tag2'>${randomUser?.name}</p>
+        <p class='detail2'>${randomUser?.companyName}</p>
+        <p class='detail2'>(${randomUser?.designation})</p>
       `;
     }
   }, 4000);
@@ -66,10 +66,11 @@ document.getElementById("spin2").addEventListener("click", async () => {
           headers: {
             "Content-Type": "application/json",
           },
+          body: JSON.stringify({ prizeNumber: 2 }),
         }
       );
       const user = await response.json();
-      console.log("user", user);
+      console.log("user2", user);
 
       return {
         user,

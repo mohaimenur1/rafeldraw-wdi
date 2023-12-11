@@ -336,13 +336,13 @@ body {
 
 #userDetails {
   background-color: #023373;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .name-tag {
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bold;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .detail {

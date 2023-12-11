@@ -309,22 +309,22 @@
 }
 
 .box3 {
-  animation: zoomDetailsBox2 1s forwards;
+  animation: zoomDetailsBox3 1s forwards;
 }
 
 #userDetails3 {
   background-color: #023373;
-  padding: 5rem;
+  padding: 1rem;
 }
 
 .name-tag3 {
-  font-size: xx-large;
+  font-size: large;
   font-weight: bold;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .detail3 {
-  font-size: x-large;
+  font-size: medium;
 }
 
 .hide-btn3 {

@@ -14,38 +14,35 @@
 </head>
 <body>
     <div class="container d-flex flex-column justify-content-between"> 
-        <!-- <div>
-            <h1 class="heading-text">Raafel Draw</h1>
-        </div> -->
         <div class="row">
-            <div class="col-lg-4">        
-                <div class="first">
-                    <div class="spinner-container">
-                        <div class="containers">
-                            <img class="one" src="Logo.png" alt="Like" />
-                        </div>
-                            <button id="spin">Go</button>
-                            <!-- <button id="reset">Reset</button> -->
-                    </div>
-                    <!-- <button id="reset">Reset</button> -->
-                    <div class="box">
-                        <div id="userDetails" class="ribbon blue crossed"></div>
-                        <lottie-player class="animation" src="https://lottie.host/e28cf92e-c271-4d02-a1e4-c235fab9ed2e/h9Tokq5FH2.json" background="##FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-4">
                 <div class="second">
                     <div class="spinner-container2">
                         <div class="containers2">
                             <img class="one2" src="Logo.png" alt="Like" />
                         </div>
-                            <button id="spin2">Go</button>
+                            <button id="spin2" data-seq="2">Go</button>
                             <!-- <button id="reset2">Reset</button> -->
                     </div>
                     
                     <div class="box2">
                         <div id="userDetails2" class="ribbon2 blue2 crossed2"></div>
+                        <lottie-player class="animation" src="https://lottie.host/e28cf92e-c271-4d02-a1e4-c235fab9ed2e/h9Tokq5FH2.json" background="##FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">        
+                <div class="first">
+                    <div class="spinner-container">
+                        <div class="containers">
+                            <img class="one" src="Logo.png" alt="Like" />
+                        </div>
+                            <button id="spin" data-seq="1">Go</button>
+                            <button id="reset">Reset</button>
+                    </div>
+                    <!-- <button id="reset">Reset</button> -->
+                    <div class="box">
+                        <div id="userDetails" class="ribbon blue crossed"></div>
                         <lottie-player class="animation" src="https://lottie.host/e28cf92e-c271-4d02-a1e4-c235fab9ed2e/h9Tokq5FH2.json" background="##FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
                     </div>
                 </div>
@@ -56,7 +53,7 @@
                         <div class="containers3">
                             <img class="one3" src="Logo.png" alt="Like" />
                         </div>
-                            <button id="spin3">Go</button>
+                            <button id="spin3" data-seq="3">Go</button>
                             <!-- <button id="reset2">Reset</button> -->
                     </div>
                     
@@ -68,6 +65,8 @@
             </div>  
         </div>
     </div>
+    <!-- <button>Reset</button> -->
+    
         
     <script src="index.js"></script>
     <script src="index2.js"></script>
