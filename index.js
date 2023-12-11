@@ -48,6 +48,7 @@ document.getElementById("spin").addEventListener("click", async () => {
   setTimeout(async () => {
     container.classList.add("hide-spinner");
     if (randomUser) {
+      document.querySelector(".ribbon").classList.remove("hide-mid2");
       userDetailsContainer.innerHTML = `
         <h4>1st Prize</h4>
         <p class='name-tag'>${randomUser?.name}</p>
@@ -85,6 +86,7 @@ document.getElementById("spin").addEventListener("click", async () => {
 document.addEventListener("DOMContentLoaded", () => {
   btn.classList.add("show-btn");
   reset.classList.add("hide-btn");
+  document.querySelector(".ribbon").classList.add("hide-mid2");
 });
 
 document.getElementById("reset").addEventListener("click", () => {

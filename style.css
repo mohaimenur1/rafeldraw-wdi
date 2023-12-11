@@ -144,8 +144,11 @@ body {
 .box {
   position: absolute;
   margin: 0 auto;
-  background: #fff;
-  max-width: 500px;
+  /* height: 23.125rem; */
+  /* height: 700px; */
+  /* background: #fff; */
+  /* min-width: 300px; */
+  /* max-height: 680px; */
   z-index: -99;
   display: flex;
   align-items: center;
@@ -161,141 +164,16 @@ body {
 .ribbon {
   background: #0367a6;
   color: #fff;
-  padding: 18px;
+  height: 23.125rem;
+  /* padding: 18px; */
   text-align: center;
   margin-left: -20px;
   margin-right: -20px;
+  /* min-width: 500px; */
+  /* min-height: 380px; */
   /*border-radius: 3px 3px 0 0;*/
   position: relative;
   z-index: -999;
-}
-.ribbon:before,
-.ribbon:after {
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  content: "";
-  top: 100%;
-}
-.ribbon.red-gradient {
-  background: rgb(234, 67, 53); /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    rgba(234, 67, 53, 1) 0%,
-    rgba(178, 0, 0, 1) 100%,
-    rgba(125, 185, 232, 1) 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(234, 67, 53, 1) 0%,
-    rgba(178, 0, 0, 1) 100%,
-    rgba(125, 185, 232, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    rgba(234, 67, 53, 1) 0%,
-    rgba(178, 0, 0, 1) 100%,
-    rgba(125, 185, 232, 1) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea4335', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-}
-.ribbon.red-gradient:before {
-  border-top: 20px solid #861f1a;
-  border-left: 20px solid transparent;
-  left: 0;
-}
-.ribbon.red-gradient:after {
-  border-top: 20px solid #861f1a;
-  border-right: 20px solid transparent;
-  left: calc(100% - 20px);
-}
-.ribbon.blue {
-  background: #4285f4;
-}
-.ribbon.blue.top:before {
-  top: -20px;
-  left: 0;
-  border-bottom: 20px solid #2d5699;
-  border-left: 20px solid transparent;
-}
-.ribbon.blue.top:after {
-  top: -20px;
-  left: calc(100% - 20px);
-  border-bottom: 20px solid #2d5699;
-  border-right: 20px solid transparent;
-}
-.ribbon.blue.bottom:before {
-  border-top: 20px solid #2d5699;
-  border-left: 20px solid transparent;
-  left: 0;
-}
-.ribbon.blue.bottom:after {
-  border-top: 20px solid #2d5699;
-  border-right: 20px solid transparent;
-  left: calc(100% - 20px);
-}
-.ribbon.blue.crossed:before {
-  top: -20px;
-  left: 0;
-  border-bottom: 20px solid #2d5699;
-  border-left: 20px solid transparent;
-}
-.ribbon.blue.crossed:after {
-  border-top: 20px solid #2d5699;
-  border-right: 20px solid transparent;
-  left: calc(100% - 20px);
-}
-.ribbon.expand {
-  position: relative;
-  padding: 0;
-  background: #4285f4;
-}
-.ribbon.expand:after {
-  border-top: 20px solid #2d5699;
-  border-right: 20px solid transparent;
-  left: calc(100% - 20px);
-}
-.ribbon.expand:before {
-  border-top: 20px solid #2d5699;
-  border-left: 20px solid transparent;
-  left: 0;
-}
-.ribbon.expand span {
-  position: relative;
-  padding: 18px 0;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.ribbon.expand span:before,
-.ribbon.expand span:after {
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  content: "";
-  top: 100%;
-}
-.ribbon.expand span:after {
-  top: -20px;
-  left: calc(100% - 20px);
-  border-bottom: 20px solid #2d5699;
-  border-right: 20px solid transparent;
-}
-.ribbon.expand span:before {
-  border-bottom: 20px solid #2d5699;
-  border-left: 20px solid transparent;
-  left: 0;
-  top: -20px;
 }
 
 .hide-mid {
